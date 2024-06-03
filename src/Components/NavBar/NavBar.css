@@ -1,0 +1,118 @@
+/*
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+
+.nav-links ul li Link {
+    text-decoration: none;
+    color: #fff;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #444;
+    margin: 10px 20px;
+    border-radius: 15px;
+    max-height: 40px;
+}
+
+/* Logo  */
+.navbar img {
+    width: 100px;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fdfcfa;
+    font-size: 17px;
+    padding: 8px 12px;
+    transition: 0.3s ease ;
+    margin: 15px;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    /* ffd700 gold */
+    color: #ffd700;
+    border-radius: 15px;
+}
+
+.menu-bar img{
+    width: 27px;
+}
+.menu-bar {
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar {
+        padding: 5px 0;
+        margin: 10px 8px;
+        max-height: 30px;
+    }
+    .navbar img {
+        width: 75px;
+        padding-left: 0;
+    }
+    /* .nav-links {
+        display: none;
+    } */
+    .nav-links li {
+        left: 2%;
+        padding: 15px;
+    }
+    .menu-bar img {
+        width: 22px;
+        padding-right: 15px;
+    }
+    .menu-bar {
+        display: block;
+    }
+    .nav-links {
+        display: block;
+        position: fixed;
+        top: 1.8%;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        font-size: 8px;
+        padding-top: 10%;
+        background: #444;
+        flex-direction: column;
+        z-index: 1;
+        transform: translateX(100vh);
+        transition: 0.5s ease-in;
+    }
+
+    div .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 3%;
+    }
+}
+
+.menu-active {
+    transform: translateX(0);
+}
