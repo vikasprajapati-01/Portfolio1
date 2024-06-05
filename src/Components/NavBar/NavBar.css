@@ -1,118 +1,141 @@
-/*
-.nav-links {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
-    list-style: none;
-    align-items: center;
-    text-align: center;
-    justify-content: end;
+.nav-menu {
+    background-color: #121212;
+    position: fixed;
+    inset-block: 0;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    padding: 30px 30px;
+    transition: all 0.5s ease-in-out;
 }
 
-.nav-links ul li Link {
-    text-decoration: none;
-    color: #fff;
-} */
+.show-menu {
+    left: 0;
+}
 
-.navbar {
+.nav-link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #444;
-    margin: 10px 20px;
-    border-radius: 15px;
-    max-height: 40px;
+    column-gap: 24px;
+    border-bottom: 1px solid #444;
+    padding-block: 14px;
 }
 
-/* Logo  */
-.navbar img {
+.nav-icon {
+    width: 24px;
+}
+
+.nav-name {
+    color: #c5c6c7;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-logo {
     width: 100px;
 }
 
-/* Navbar Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 5px 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fdfcfa;
-    font-size: 17px;
-    padding: 8px 12px;
-    transition: 0.3s ease ;
-    margin: 15px;
-}
-
-.nav-links a:hover {
-    background-color: #555;
-    /* ffd700 gold */
+.active-nav .nav-name {
     color: #ffd700;
-    border-radius: 15px;
 }
 
-.menu-bar img{
-    width: 27px;
+/* Hamburger icon */
+
+.nav-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #c5c6c7;
+    padding: 12px 10px;
 }
-.menu-bar {
-    cursor: pointer;
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #121212;
+    margin-bottom: 5px;
+    transition: 0.2s ease;
+}
+
+.animate-toggle span:first-child {
+    transform: rotate(45deg) translate(6px, 4px);
+}
+.animate-toggle span:nth-child(2) {
     display: none;
 }
-
-@media only screen and (max-width: 900px) {
-    .navbar {
-        padding: 5px 0;
-        margin: 10px 8px;
-        max-height: 30px;
-    }
-    .navbar img {
-        width: 75px;
-        padding-left: 0;
-    }
-    /* .nav-links {
-        display: none;
-    } */
-    .nav-links li {
-        left: 2%;
-        padding: 15px;
-    }
-    .menu-bar img {
-        width: 22px;
-        padding-right: 15px;
-    }
-    .menu-bar {
-        display: block;
-    }
-    .nav-links {
-        display: block;
-        position: fixed;
-        top: 1.8%;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        font-size: 8px;
-        padding-top: 10%;
-        background: #444;
-        flex-direction: column;
-        z-index: 1;
-        transform: translateX(100vh);
-        transition: 0.5s ease-in;
-    }
-
-    div .close-icon {
-        position: absolute;
-        top: 10px;
-        right: 3%;
-    }
+.animate-toggle span:last-child {
+    transform: rotate(-45deg) translate(1px, 1px);
 }
 
-.menu-active {
-    transform: translateX(0);
+@media screen and (min-width: 1024px) {
+    .nav-menu {
+        all: unset;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .nav-logo {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed;
+        inset-block: 0;
+        right: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-item {
+        margin-block: 20px;
+        justify-content: center;
+        display: flex;
+        /* align-items: center; */
+    }
+    .nav-link {
+        padding: 0;
+        border-bottom: none;
+        background-color: #121212;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .nav-icon {
+        width: 24px;
+        margin-inline: auto;
+    }
+    .nav-name {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #222;
+        font-size: 18px;
+        color: #c5c6c7;
+        height: 100%;
+        line-height: 50px;
+        padding-inline: 20px 20px;
+        border-radius: 30px;
+        z-index: -1;
+        /* Hidding the nav name until hovered */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+    .nav-link:hover .nav-name {
+        right: 35px;
+        /* color: #c5c6c7; */
+        opacity: 1;
+        visibility: visible;
+        /* transition: 0.5s ease; */
+        border-radius: 30px 0 0 30px;
+    }
+    .nav-link:hover, .active-nav {
+        background-color: #777;
+        transition: 0.4s ease;
+    }
 }

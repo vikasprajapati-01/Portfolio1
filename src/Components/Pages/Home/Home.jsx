@@ -16,6 +16,7 @@ function Home() {
 
   return (
     <section className='home'>
+      <h1>Home</h1>
       <div className='home-left'>
         <h1>Hi, I'm <span>VIKAS PRAJAPATI</span></h1>
 
