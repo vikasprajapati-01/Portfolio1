@@ -4,8 +4,9 @@
     inset-block: 0;
     top: 0;
     left: -100%;
-    width: 50%;
+    width: 100%;
     padding: 30px 30px;
+    z-index: 2;
     transition: all 0.5s ease-in-out;
 }
 
@@ -50,6 +51,7 @@
     border-radius: 5px;
     background-color: #c5c6c7;
     padding: 12px 10px;
+    z-index: 2;
 }
 
 .nav-toggle span {
