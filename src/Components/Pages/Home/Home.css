@@ -56,8 +56,8 @@
         display: flex;
     }
     .home_img {
-        width: 32vh;
-        height: 32vh;
+        width: 45vh;
+        height: 45vh;
     }
     .home_data {
         padding-right: 40px;
@@ -77,8 +77,8 @@
         row-gap: 10px;
     }
     .home_img {
-        width: 45vh;
-        height: 45vh;
+        width: 35vh;
+        height: 35vh;
         margin-top: auto;
     }
 
