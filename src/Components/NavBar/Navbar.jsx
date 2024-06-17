@@ -20,31 +20,31 @@ function Navbar() {
                 <img src={logo} alt="" className='nav-logo' />
                 <ul className="nav-list">
                     <li className="nav-item">
-                        <NavLink to='/portfolio1' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
+                        <NavLink to='/Portfolio1' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
                             <img src={home_icon} alt="" className="nav-icon" />
                             <h3 className="nav-name">Home</h3>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/skills' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
+                        <NavLink to='Portfolio1/skills' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
                             <img src={skill_icon} alt="" className="nav-icon" />
                             <h3 className="nav-name">Skills</h3>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/projects' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
+                        <NavLink to='Portfolio1/projects' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
                             <img src={project_icon} alt="" className="nav-icon" />
                             <h3 className="nav-name">Projects</h3>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/education' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
+                        <NavLink to='Portfolio1/education' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
                             <img src={education_icon} alt="" className="nav-icon" />
                             <h3 className="nav-name">Education</h3>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/contact' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
+                        <NavLink to='Portfolio1/contact' className={({ isActive }) => isActive ? 'nav-link active-nav' : 'nav-link'} onClick={() => setShowMenu(!showMenu)} >
                             <img src={contact_icon} alt="" className="nav-icon" />
                             <h3 className="nav-name">Contact</h3>
                         </NavLink>
