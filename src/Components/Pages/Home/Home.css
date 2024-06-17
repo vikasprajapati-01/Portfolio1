@@ -56,8 +56,8 @@
         display: flex;
     }
     .home_img {
-        width: 45vh;
-        height: 45vh;
+        width: 35vh;
+        height: 35vh;
     }
     .home_data {
         padding-right: 40px;
@@ -99,6 +99,5 @@
 
     .home_description {
         font-size: 12px;
-        padding-left: 10px;
     }
 }
